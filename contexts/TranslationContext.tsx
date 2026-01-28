@@ -33,7 +33,7 @@ const translations: Record<Language, Record<string, string>> = {
     'home.featuredSubtitle': 'Un aperçu des talents qui seront présents cette année.',
     'home.seeAll': 'Voir tout l\'annuaire',
     'home.areYouArtisan': 'Vous êtes artisan ?',
-    'home.joinUs': 'Rejoignez plus de 50 créateurs passionnés pour cette édition printanière. Partagez votre savoir-faire et rencontrez un public curieux.',
+    'home.joinUs': 'Rejoignez des créateurs passionnés pour cette première édition printanière. Partagez votre savoir-faire et rencontrez un public curieux.',
     'home.register': 'Je souhaite m\'inscrire',
     
     // Artisans
@@ -164,7 +164,7 @@ const translations: Record<Language, Record<string, string>> = {
     'home.featuredSubtitle': 'Een voorproefje van de talenten die dit jaar aanwezig zullen zijn.',
     'home.seeAll': 'Bekijk het volledige register',
     'home.areYouArtisan': 'Bent u een ambachtsman?',
-    'home.joinUs': 'Sluit je aan bij meer dan 50 gepassioneerde makers voor deze lenteeditie. Deel je knowhow en ontmoet een nieuwsgierig publiek.',
+    'home.joinUs': 'Sluit je aan bij gepassioneerde makers voor deze eerste lenteeditie. Deel je knowhow en ontmoet een nieuwsgierig publiek.',
     'home.register': 'Ik wil me inschrijven',
     
     // Artisans
