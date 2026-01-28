@@ -62,7 +62,7 @@ export const Sponsors: React.FC = () => {
         )}
       </div>
 
-      <section className="max-w-4xl mx-auto px-4 mt-32 text-center bg-white rounded-[40px] p-12 shadow-sm border border-gray-100">
+      <section className="max-w-4xl mx-auto px-4 mt-16 md:mt-32 text-center bg-white rounded-[40px] p-6 md:p-12 shadow-sm border border-gray-100">
         <h2 className="text-3xl font-bold text-gray-900 mb-6">Devenir partenaire ?</h2>
         <p className="text-gray-600 mb-8 leading-relaxed">
           Associez votre image à un événement local, dynamique et familial. Contactez-nous pour découvrir nos formules de partenariat.

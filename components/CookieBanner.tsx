@@ -56,7 +56,7 @@ export const CookieBanner: React.FC = () => {
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t-2 border-blue-200 shadow-2xl animate-fade-in-up">
-      <div className="max-w-7xl mx-auto px-4 py-6">
+      <div className="max-w-7xl mx-auto px-4 py-4 md:py-6">
         <div className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-6">
           {/* Cookie Icon */}
           <div className="flex-shrink-0">

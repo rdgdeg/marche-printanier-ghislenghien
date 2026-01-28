@@ -144,7 +144,7 @@ export const Contact: React.FC = () => {
         <div className="grid md:grid-cols-5 gap-8">
           {/* Colonne Formulaire */}
           <div className="md:col-span-3">
-            <form onSubmit={handleSubmit} className="bg-white rounded-[40px] shadow-2xl p-8 md:p-12 space-y-6">
+            <form onSubmit={handleSubmit} className="bg-white rounded-[40px] shadow-2xl p-6 md:p-8 lg:p-12 space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-sm font-bold text-gray-700 flex items-center gap-1">
@@ -259,7 +259,7 @@ export const Contact: React.FC = () => {
           </div>
 
           {/* Colonne Informations de contact */}
-          <div className="md:col-span-2 space-y-6">
+          <div className="md:col-span-2 space-y-6 order-1 md:order-2">
             <div className="bg-white rounded-[40px] p-8 shadow-sm border border-gray-100 hover-lift transition-all">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center">

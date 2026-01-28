@@ -74,7 +74,7 @@ export const Registration: React.FC = () => {
       </section>
 
       <div className="max-w-4xl mx-auto px-4 -mt-10">
-        <form onSubmit={handleSubmit} className="bg-white rounded-[40px] shadow-2xl p-8 md:p-12 space-y-12">
+        <form onSubmit={handleSubmit} className="bg-white rounded-[40px] shadow-2xl p-6 md:p-8 lg:p-12 space-y-8 md:space-y-12">
           
           {/* Section: Identité */}
           <div className="space-y-8">

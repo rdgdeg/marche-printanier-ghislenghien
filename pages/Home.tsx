@@ -15,7 +15,7 @@ export const Home: React.FC = () => {
   return (
     <div className="pb-20">
       {/* Hero Section */}
-      <section className="relative h-[85vh] min-h-[600px] flex items-center overflow-hidden">
+      <section className="relative min-h-[500px] md:h-[85vh] md:min-h-[600px] flex items-center overflow-hidden py-12 md:py-0">
         {/* Background avec affiche */}
         <div className="absolute inset-0 -z-10 opacity-5">
           <img 
@@ -28,7 +28,7 @@ export const Home: React.FC = () => {
         <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-blue-50 rounded-full blur-3xl -z-10 -mr-32 -mt-32"></div>
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-pink-50 rounded-full blur-3xl -z-10 -ml-20 -mb-20"></div>
 
-        <div className="max-w-7xl mx-auto px-4 w-full grid md:grid-cols-2 gap-12 items-center">
+        <div className="max-w-7xl mx-auto px-4 w-full grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className="animate-in fade-in slide-in-from-left duration-700">
             <span className="inline-block bg-blue-100 text-blue-700 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-6 animate-fade-in">
               {t('home.edition')}

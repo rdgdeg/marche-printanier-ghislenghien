@@ -51,9 +51,9 @@ export const ArtisanDetail: React.FC = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 pt-12">
-        <div className="grid lg:grid-cols-12 gap-12">
+        <div className="grid lg:grid-cols-12 gap-6 md:gap-12">
           {/* Photos Column */}
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-7 order-2 lg:order-1">
             <div className="rounded-[40px] overflow-hidden shadow-xl bg-white mb-6">
               <img 
                 src={artisan.photo_principale} 
@@ -74,8 +74,8 @@ export const ArtisanDetail: React.FC = () => {
           </div>
 
           {/* Info Column */}
-          <div className="lg:col-span-5">
-            <div className="bg-white rounded-[40px] p-8 md:p-12 shadow-sm border border-gray-100 h-full">
+          <div className="lg:col-span-5 order-1 lg:order-2">
+            <div className="bg-white rounded-[40px] p-6 md:p-8 lg:p-12 shadow-sm border border-gray-100 h-full">
               <div className="flex flex-wrap gap-2 mb-6">
                 {artisan.categories.map(cat => (
                   <span key={cat} className="bg-blue-50 text-blue-700 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">

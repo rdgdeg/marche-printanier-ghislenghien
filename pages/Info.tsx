@@ -5,9 +5,9 @@ import { EVENT_INFO, ARTISANS } from '../data';
 export const Info: React.FC = () => {
   return (
     <div className="bg-gray-50 pb-24">
-      <section className="bg-white py-24">
+      <section className="bg-white py-12 md:py-24">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">Infos <span className="text-blue-600">Pratiques</span></h1>
+          <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-gray-900 mb-6">Infos <span className="text-blue-600">Pratiques</span></h1>
           <p className="text-xl text-gray-500 leading-relaxed">
             Tout ce qu'il faut savoir pour préparer votre visite au Marché Printanier de Ghislenghien.
           </p>

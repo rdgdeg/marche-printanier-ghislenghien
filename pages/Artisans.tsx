@@ -116,7 +116,7 @@ export const Artisans: React.FC = () => {
         </div>
 
         {filteredArtisans.length > 0 ? (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
             {filteredArtisans.map(artisan => (
               <ArtisanCard key={artisan.slug} artisan={artisan} />
             ))}
