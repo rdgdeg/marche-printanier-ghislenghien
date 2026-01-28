@@ -8,10 +8,13 @@ export interface Artisan {
   description_longue?: string;
   email: string;
   telephone?: string;
+  adresse?: string;
+  codePostal?: string;
+  ville?: string;
+  horaires?: string;
   site?: string;
   instagram?: string;
   facebook?: string;
-  ville?: string;
   photo_principale: string;
   galerie?: string[];
   featured?: boolean;

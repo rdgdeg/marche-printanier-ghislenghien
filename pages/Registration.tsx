@@ -14,9 +14,13 @@ export const Registration: React.FC = () => {
     descriptionLongue: '',
     email: '',
     telephone: '',
+    adresse: '',
+    codePostal: '',
+    ville: '',
+    horaires: '',
     site: '',
     instagram: '',
-    ville: '',
+    facebook: '',
     consent: false
   });
 
@@ -25,6 +29,7 @@ export const Registration: React.FC = () => {
     // Simulate API call
     console.log('Form data:', formData);
     setSubmitted(true);
+    setFormData({ nom: '', titre: '', selectedCategories: [], descriptionCourte: '', descriptionLongue: '', email: '', telephone: '', adresse: '', codePostal: '', ville: '', horaires: '', site: '', instagram: '', facebook: '', consent: false });
     window.scrollTo(0, 0);
   };
 
@@ -211,15 +216,35 @@ export const Registration: React.FC = () => {
               </div>
               <div className="space-y-2">
                 <label className="text-sm font-bold text-gray-700">{t('registration.phone')}</label>
-                <input type="tel" value={formData.telephone} onChange={e => setFormData({...formData, telephone: e.target.value})} className="w-full bg-gray-50 border border-gray-200 rounded-2xl px-5 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                <input type="tel" value={formData.telephone} onChange={e => setFormData({...formData, telephone: e.target.value})} placeholder="+32 123 45 67 89" className="w-full bg-gray-50 border border-gray-200 rounded-2xl px-5 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+              </div>
+              <div className="space-y-2">
+                <label className="text-sm font-bold text-gray-700">{t('registration.address')}</label>
+                <input type="text" value={formData.adresse} onChange={e => setFormData({...formData, adresse: e.target.value})} placeholder={t('registration.addressPlaceholder')} className="w-full bg-gray-50 border border-gray-200 rounded-2xl px-5 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+              </div>
+              <div className="space-y-2">
+                <label className="text-sm font-bold text-gray-700">{t('registration.postalCode')}</label>
+                <input type="text" value={formData.codePostal} onChange={e => setFormData({...formData, codePostal: e.target.value})} placeholder="7800" className="w-full bg-gray-50 border border-gray-200 rounded-2xl px-5 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
               </div>
               <div className="space-y-2">
                 <label className="text-sm font-bold text-gray-700">{t('registration.city')}</label>
-                <input type="text" value={formData.ville} onChange={e => setFormData({...formData, ville: e.target.value})} className="w-full bg-gray-50 border border-gray-200 rounded-2xl px-5 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                <input type="text" value={formData.ville} onChange={e => setFormData({...formData, ville: e.target.value})} placeholder={t('registration.cityPlaceholder')} className="w-full bg-gray-50 border border-gray-200 rounded-2xl px-5 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+              </div>
+              <div className="space-y-2">
+                <label className="text-sm font-bold text-gray-700">{t('registration.hours')}</label>
+                <input type="text" value={formData.horaires} onChange={e => setFormData({...formData, horaires: e.target.value})} placeholder={t('registration.hoursPlaceholder')} className="w-full bg-gray-50 border border-gray-200 rounded-2xl px-5 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+              </div>
+              <div className="space-y-2">
+                <label className="text-sm font-bold text-gray-700">{t('registration.website')}</label>
+                <input type="url" value={formData.site} onChange={e => setFormData({...formData, site: e.target.value})} placeholder="https://..." className="w-full bg-gray-50 border border-gray-200 rounded-2xl px-5 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
               </div>
               <div className="space-y-2">
                 <label className="text-sm font-bold text-gray-700">{t('registration.social')}</label>
                 <input type="text" value={formData.instagram} onChange={e => setFormData({...formData, instagram: e.target.value})} placeholder="@votre_profil" className="w-full bg-gray-50 border border-gray-200 rounded-2xl px-5 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+              </div>
+              <div className="space-y-2">
+                <label className="text-sm font-bold text-gray-700">{t('registration.facebook')}</label>
+                <input type="text" value={formData.facebook} onChange={e => setFormData({...formData, facebook: e.target.value})} placeholder="@votre_page" className="w-full bg-gray-50 border border-gray-200 rounded-2xl px-5 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500" />
               </div>
             </div>
           </div>
