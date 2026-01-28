@@ -18,6 +18,31 @@ export const Sponsors: React.FC = () => {
         </div>
       </section>
 
+      {/* Section logos en 4 colonnes */}
+      {SPONSORS.length > 0 && (
+        <section className="max-w-7xl mx-auto px-4 mt-12 mb-24">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+            {SPONSORS.map(sponsor => (
+              <a
+                key={sponsor.id}
+                href={sponsor.lien}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group bg-white p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all flex items-center justify-center"
+              >
+                <div className="w-full h-24 flex items-center justify-center">
+                  <img 
+                    src={sponsor.logo} 
+                    alt={sponsor.nom} 
+                    className="max-h-full max-w-full object-contain grayscale group-hover:grayscale-0 transition-all duration-500" 
+                  />
+                </div>
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
+
       <div className="max-w-7xl mx-auto px-4 mt-12 space-y-24">
         {/* Or Section */}
         {gold.length > 0 && (
