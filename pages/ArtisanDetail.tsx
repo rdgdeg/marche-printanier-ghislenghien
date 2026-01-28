@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { ARTISANS } from '../data';
 
@@ -9,6 +9,11 @@ export const ArtisanDetail: React.FC = () => {
   const [copySuccess, setCopySuccess] = useState(false);
 
   const artisan = ARTISANS.find(a => a.slug === slug);
+
+  // S'assurer qu'on scroll en haut quand on arrive sur la page
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [slug]);
 
   if (!artisan) {
     return (
