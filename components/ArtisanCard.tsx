@@ -31,12 +31,9 @@ export const ArtisanCard: React.FC<ArtisanCardProps> = ({ artisan }) => {
       </div>
       
       <div className="p-6 flex flex-col flex-grow">
-        <h3 className="text-xl font-bold text-gray-800 mb-1 group-hover:text-blue-600 transition-colors">
+        <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors">
           {artisan.nom}
         </h3>
-        <p className="text-blue-600 text-xs font-semibold mb-3">
-          {artisan.titre}
-        </p>
         <p className="text-gray-500 text-sm line-clamp-2 mb-6">
           {artisan.description_courte}
         </p>

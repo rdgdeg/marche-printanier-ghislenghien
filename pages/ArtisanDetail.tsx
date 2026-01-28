@@ -84,11 +84,10 @@ export const ArtisanDetail: React.FC = () => {
                 ))}
               </div>
 
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">{artisan.nom}</h1>
-              <p className="text-blue-600 text-xl font-medium mb-8 italic">"{artisan.titre}"</p>
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">{artisan.nom}</h1>
 
               <div className="space-y-6 mb-12">
-                <h3 className="font-bold text-gray-800 text-lg border-l-4 border-blue-500 pl-4">Son histoire</h3>
+                <h3 className="font-bold text-gray-800 text-lg border-l-4 border-blue-500 pl-4">Présentation</h3>
                 <p className="text-gray-600 leading-relaxed text-lg">
                   {artisan.description_longue || artisan.description_courte}
                 </p>
