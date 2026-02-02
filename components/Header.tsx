@@ -47,13 +47,16 @@ export const Header: React.FC = () => {
           <LanguageSelector language={language} setLanguage={setLanguage} />
           <button 
             onClick={() => setIsOpen(!isOpen)}
-            className="p-2 text-gray-600 hover:bg-gray-100 rounded-lg transition-colors"
-            aria-label="Toggle Menu"
+            className="min-w-[44px] min-h-[44px] flex items-center justify-center gap-1.5 px-3 py-2 bg-emerald-600 text-white rounded-xl font-semibold text-sm hover:bg-emerald-700 active:scale-95 transition-colors shadow-md"
+            aria-label={isOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
           >
             {isOpen ? (
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+              <svg className="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M6 18L18 6M6 6l12 12"></path></svg>
             ) : (
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+              <>
+                <svg className="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                <span>Menu</span>
+              </>
             )}
           </button>
         </div>
@@ -63,10 +66,10 @@ export const Header: React.FC = () => {
       {isOpen && (
         <>
           <div 
-            className="md:hidden fixed inset-0 top-16 bg-black/40 z-40"
+            className="md:hidden fixed inset-0 top-16 bg-black/50 z-[100]"
             aria-hidden="true"
           />
-          <div className="md:hidden fixed inset-0 top-16 z-50 bg-white p-4 flex flex-col gap-6 animate-in slide-in-from-right duration-300 overflow-y-auto">
+          <div className="md:hidden fixed inset-0 top-16 z-[110] bg-white p-4 flex flex-col gap-6 overflow-y-auto animate-slide-in-from-right">
             <div className="flex flex-col gap-2">
             <MobileNavLink to="/">{t('nav.home')}</MobileNavLink>
             <MobileNavLink to="/infos">{t('nav.info')}</MobileNavLink>

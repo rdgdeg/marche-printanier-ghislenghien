@@ -117,14 +117,14 @@ export const ARTISANS: Artisan[] = [
     featured: true
   },
   {
-    slug: 'atelier-bonpa',
-    nom: 'L\'atelier de Bonpa',
+    slug: 'atelier-bompa',
+    nom: 'L\'atelier de Bompa',
     titre: 'Gravures sur bois, découpe sur bois, création artistique en bois et impression 3D',
     categories: ['Gravure & impression', 'Déco & céramique'],
     description_courte: 'Gravures et découpes sur bois, créations artistiques et impressions 3D.',
-    description_longue: 'L\'atelier de Bonpa allie tradition et modernité avec des gravures et découpes sur bois, des créations artistiques uniques et des impressions 3D. Chaque pièce est réalisée avec passion et précision.',
+    description_longue: 'L\'atelier de Bompa allie tradition et modernité avec des gravures et découpes sur bois, des créations artistiques uniques et des impressions 3D. Chaque pièce est réalisée avec passion et précision.',
     email: '',
-    photo_principale: 'https://picsum.photos/seed/bonpa/800/600',
+    photo_principale: 'https://picsum.photos/seed/bompa/800/600',
     featured: false
   },
   {
@@ -264,7 +264,6 @@ export const EVENT_INFO: EventInfo = {
   details: [
     'Château gonflable pour les enfants',
     'Restauration sur place',
-    'Parking gratuit à proximité',
     'Accès PMR complet',
     'Espace Food & Drinks locaux',
     'Activités créatives pour enfants toute la journée'
