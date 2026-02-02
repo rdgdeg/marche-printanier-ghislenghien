@@ -80,6 +80,9 @@ export const Registration: React.FC = () => {
 
       <div className="max-w-4xl mx-auto px-4 -mt-10">
         <form onSubmit={handleSubmit} className="bg-white rounded-[40px] shadow-2xl p-6 md:p-8 lg:p-12 space-y-8 md:space-y-12">
+          <div className="p-4 rounded-2xl bg-emerald-50 border border-emerald-100 text-emerald-800 text-sm leading-relaxed">
+            💡 {t('registration.ideasNote')}
+          </div>
           
           {/* Section: Identité */}
           <div className="space-y-8">

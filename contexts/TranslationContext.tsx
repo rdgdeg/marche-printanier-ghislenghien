@@ -57,6 +57,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Registration
     'registration.title': 'J\'envoie mes infos',
     'registration.subtitle': 'Remplissez le formulaire ci-dessous pour présenter votre univers et partager vos informations avec les visiteurs.',
+    'registration.ideasNote': 'Vous ne vous sentez pas à l\'aise avec la rédaction ? Envoyez-nous vos idées générales, nous vous enverrons une proposition de contenu.',
     'registration.section1': 'Votre activité',
     'registration.section2': 'Présentation',
     'registration.section3': 'Photos',
@@ -193,6 +194,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Registration
     'registration.title': 'Ik stuur mijn gegevens',
     'registration.subtitle': 'Vul het onderstaande formulier in om uw universum te presenteren en uw informatie met bezoekers te delen.',
+    'registration.ideasNote': 'Voelt u zich niet op uw gemak met het schrijven? Stuur ons uw algemene ideeën, wij sturen u een voorstel voor de inhoud.',
     'registration.section1': 'Uw activiteit',
     'registration.section2': 'Presentatie',
     'registration.section3': 'Foto\'s',
