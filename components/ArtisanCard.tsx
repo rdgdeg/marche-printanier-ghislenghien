@@ -23,7 +23,7 @@ export const ArtisanCard: React.FC<ArtisanCardProps> = ({ artisan }) => {
         />
         <div className="absolute top-4 left-4 flex flex-wrap gap-2">
           {artisan.categories.slice(0, 2).map(cat => (
-            <span key={cat} className="bg-white/90 backdrop-blur-sm text-blue-700 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">
+            <span key={cat} className="bg-white/90 backdrop-blur-sm text-emerald-700 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">
               {cat}
             </span>
           ))}
@@ -31,7 +31,7 @@ export const ArtisanCard: React.FC<ArtisanCardProps> = ({ artisan }) => {
       </div>
       
       <div className="p-6 flex flex-col flex-grow">
-        <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-blue-600 transition-colors">
+        <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-emerald-600 transition-colors">
           {artisan.nom}
         </h3>
         <p className="text-gray-500 text-sm line-clamp-2 mb-6">
@@ -39,7 +39,7 @@ export const ArtisanCard: React.FC<ArtisanCardProps> = ({ artisan }) => {
         </p>
         
         <div className="mt-auto flex items-center justify-between">
-          <span className="text-blue-600 font-bold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
+          <span className="text-emerald-600 font-bold text-sm flex items-center gap-1 group-hover:gap-2 transition-all">
             {t('artisans.discover')} <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
           </span>
         </div>

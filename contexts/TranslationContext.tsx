@@ -32,9 +32,11 @@ const translations: Record<Language, Record<string, string>> = {
     'home.featuredArtisans': 'Artisans à la une',
     'home.featuredSubtitle': 'Un aperçu des talents qui seront présents cette année.',
     'home.seeAll': 'Voir tout l\'annuaire',
+    'home.discoverOthers': 'Découvrir les autres',
     'home.areYouArtisan': 'Vous êtes artisan ?',
     'home.joinUs': 'Rejoignez des créateurs passionnés pour cette première édition printanière. Partagez votre savoir-faire et rencontrez un public curieux.',
     'home.register': 'Je souhaite m\'inscrire',
+    'home.thanksSponsors': 'Merci à nos sponsors',
     
     // Artisans
     'artisans.title': 'L\'Annuaire des',
@@ -96,6 +98,9 @@ const translations: Record<Language, Record<string, string>> = {
     'info.onSite': 'Sur place',
     'info.inflatableCastle': 'Château gonflable pour les enfants',
     'info.foodOnSite': 'Restauration sur place',
+    'event.addToCalendar': 'Ajouter au calendrier',
+    'event.share': 'Partager l\'événement',
+    'event.copied': 'Lien copié !',
     
     // Contact
     'contact.title': 'Contactez-nous',
@@ -163,9 +168,11 @@ const translations: Record<Language, Record<string, string>> = {
     'home.featuredArtisans': 'Uitgelichte ambachtslieden',
     'home.featuredSubtitle': 'Een voorproefje van de talenten die dit jaar aanwezig zullen zijn.',
     'home.seeAll': 'Bekijk het volledige register',
+    'home.discoverOthers': 'Ontdek de anderen',
     'home.areYouArtisan': 'Bent u een ambachtsman?',
     'home.joinUs': 'Sluit je aan bij gepassioneerde makers voor deze eerste lenteeditie. Deel je knowhow en ontmoet een nieuwsgierig publiek.',
     'home.register': 'Ik wil me inschrijven',
+    'home.thanksSponsors': 'Bedankt aan onze sponsors',
     
     // Artisans
     'artisans.title': 'Het Register van',
@@ -228,6 +235,9 @@ const translations: Record<Language, Record<string, string>> = {
     'info.onSite': 'Ter plaatse',
     'info.inflatableCastle': 'Opblaaskasteel voor kinderen',
     'info.foodOnSite': 'Restauratie ter plaatse',
+    'event.addToCalendar': 'Toevoegen aan agenda',
+    'event.share': 'Evenement delen',
+    'event.copied': 'Link gekopieerd!',
     
     // Contact
     'contact.title': 'Contacteer ons',

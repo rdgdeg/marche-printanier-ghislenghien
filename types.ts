@@ -23,10 +23,13 @@ export interface Artisan {
 export interface Sponsor {
   id: string;
   nom: string;
-  niveau: 'Or' | 'Argent' | 'Bronze';
+  niveau?: 'Or' | 'Argent' | 'Bronze';
   logo: string;
   lien: string;
   description?: string;
+  email?: string;
+  telephone?: string;
+  adresse?: string;
 }
 
 export interface EventInfo {

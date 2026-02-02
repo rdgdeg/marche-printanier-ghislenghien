@@ -55,12 +55,12 @@ export const CookieBanner: React.FC = () => {
   }
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t-2 border-blue-200 shadow-2xl animate-fade-in-up">
+    <div className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t-2 border-emerald-200 shadow-2xl animate-fade-in-up">
       <div className="max-w-7xl mx-auto px-4 py-4 md:py-6">
         <div className="flex flex-col md:flex-row items-start md:items-center gap-4 md:gap-6">
           {/* Cookie Icon */}
           <div className="flex-shrink-0">
-            <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-2xl">
+            <div className="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center text-2xl">
               🍪
             </div>
           </div>
@@ -74,11 +74,11 @@ export const CookieBanner: React.FC = () => {
               {t('cookies.description')}
             </p>
             <div className="flex flex-wrap gap-4 text-xs text-gray-500 mt-2">
-              <a href="#privacy" className="hover:text-blue-600 underline">
+              <a href="#privacy" className="hover:text-emerald-600 underline">
                 {t('cookies.privacyPolicy')}
               </a>
               <span>•</span>
-              <a href="#cookies" className="hover:text-blue-600 underline">
+              <a href="#cookies" className="hover:text-emerald-600 underline">
                 {t('cookies.cookiePolicy')}
               </a>
             </div>
@@ -94,7 +94,7 @@ export const CookieBanner: React.FC = () => {
             </button>
             <button
               onClick={handleAccept}
-              className="px-6 py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all shadow-md hover:shadow-lg whitespace-nowrap"
+              className="px-6 py-3 bg-emerald-600 text-white rounded-xl font-semibold hover:bg-emerald-700 transition-all shadow-md hover:shadow-lg whitespace-nowrap"
             >
               {t('cookies.accept')}
             </button>

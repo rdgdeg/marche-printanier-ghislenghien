@@ -89,7 +89,7 @@ export const Contact: React.FC = () => {
   if (submitStatus === 'success') {
     return (
       <div className="bg-gray-50 min-h-screen pb-24">
-        <section className="bg-gradient-to-br from-blue-600 to-blue-700 py-32 text-white">
+        <section className="bg-gradient-to-br from-emerald-600 to-emerald-700 py-32 text-white">
           <div className="max-w-4xl mx-auto px-4 text-center">
             <div className="w-24 h-24 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-8 text-5xl animate-scale-in">
               ✨
@@ -100,7 +100,7 @@ export const Contact: React.FC = () => {
             </p>
             <button
               onClick={() => setSubmitStatus('idle')}
-              className="bg-white text-blue-600 px-8 py-4 rounded-2xl font-bold hover:bg-blue-50 transition-all hover-lift animate-fade-in-up animation-delay-400"
+              className="bg-white text-emerald-600 px-8 py-4 rounded-2xl font-bold hover:bg-emerald-50 transition-all hover-lift animate-fade-in-up animation-delay-400"
             >
               {t('contact.send')} un autre message
             </button>
@@ -113,7 +113,7 @@ export const Contact: React.FC = () => {
   return (
     <div className="bg-gray-50 min-h-screen pb-24">
       {/* Header Section - Séparée du formulaire */}
-      <section className="bg-gradient-to-br from-blue-600 to-blue-700 py-20 text-white">
+      <section className="bg-gradient-to-br from-emerald-600 to-emerald-700 py-20 text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in-up">
             Contactez-<span className="text-yellow-300">{t('contact.titleHighlight')}</span>
@@ -155,7 +155,7 @@ export const Contact: React.FC = () => {
                     value={formData.name}
                     onChange={(e) => handleChange('name', e.target.value)}
                     className={`w-full bg-gray-50 border rounded-2xl px-5 py-3 focus:outline-none focus:ring-2 transition-all ${
-                      errors.name ? 'border-red-300 focus:ring-red-500' : 'border-gray-200 focus:ring-blue-500'
+                      errors.name ? 'border-red-300 focus:ring-red-500' : 'border-gray-200 focus:ring-emerald-500'
                     }`}
                     placeholder={t('contact.namePlaceholder')}
                   />
@@ -171,7 +171,7 @@ export const Contact: React.FC = () => {
                     value={formData.email}
                     onChange={(e) => handleChange('email', e.target.value)}
                     className={`w-full bg-gray-50 border rounded-2xl px-5 py-3 focus:outline-none focus:ring-2 transition-all ${
-                      errors.email ? 'border-red-300 focus:ring-red-500' : 'border-gray-200 focus:ring-blue-500'
+                      errors.email ? 'border-red-300 focus:ring-red-500' : 'border-gray-200 focus:ring-emerald-500'
                     }`}
                     placeholder={t('contact.emailPlaceholder')}
                   />
@@ -187,7 +187,7 @@ export const Contact: React.FC = () => {
                     value={formData.phone}
                     onChange={(e) => handleChange('phone', e.target.value)}
                     className={`w-full bg-gray-50 border rounded-2xl px-5 py-3 focus:outline-none focus:ring-2 transition-all ${
-                      errors.phone ? 'border-red-300 focus:ring-red-500' : 'border-gray-200 focus:ring-blue-500'
+                      errors.phone ? 'border-red-300 focus:ring-red-500' : 'border-gray-200 focus:ring-emerald-500'
                     }`}
                     placeholder={t('contact.phonePlaceholder')}
                   />
@@ -202,7 +202,7 @@ export const Contact: React.FC = () => {
                     value={formData.subject}
                     onChange={(e) => handleChange('subject', e.target.value)}
                     className={`w-full bg-gray-50 border rounded-2xl px-5 py-3 focus:outline-none focus:ring-2 transition-all ${
-                      errors.subject ? 'border-red-300 focus:ring-red-500' : 'border-gray-200 focus:ring-blue-500'
+                      errors.subject ? 'border-red-300 focus:ring-red-500' : 'border-gray-200 focus:ring-emerald-500'
                     }`}
                   >
                     <option value="">{t('contact.subjectPlaceholder')}</option>
@@ -225,7 +225,7 @@ export const Contact: React.FC = () => {
                   value={formData.message}
                   onChange={(e) => handleChange('message', e.target.value)}
                   className={`w-full bg-gray-50 border rounded-2xl px-5 py-3 focus:outline-none focus:ring-2 transition-all resize-none ${
-                    errors.message ? 'border-red-300 focus:ring-red-500' : 'border-gray-200 focus:ring-blue-500'
+                    errors.message ? 'border-red-300 focus:ring-red-500' : 'border-gray-200 focus:ring-emerald-500'
                   }`}
                   placeholder={t('contact.messagePlaceholder')}
                 />
@@ -241,7 +241,7 @@ export const Contact: React.FC = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-blue-600 text-white py-4 rounded-2xl font-bold shadow-lg hover:bg-blue-700 transition-all hover-lift disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 flex items-center justify-center gap-2"
+                className="w-full bg-emerald-600 text-white py-4 rounded-2xl font-bold shadow-lg hover:bg-emerald-700 transition-all hover-lift disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0 flex items-center justify-center gap-2"
               >
                 {isSubmitting ? (
                   <>
@@ -262,12 +262,12 @@ export const Contact: React.FC = () => {
           <div className="md:col-span-2 space-y-6 order-1 md:order-2">
             <div className="bg-white rounded-[40px] p-8 shadow-sm border border-gray-100 hover-lift transition-all">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center">
-                  <span className="text-blue-600 text-xl">📧</span>
+                <div className="w-10 h-10 bg-emerald-100 rounded-xl flex items-center justify-center">
+                  <span className="text-emerald-600 text-xl">📧</span>
                 </div>
                 <h4 className="font-bold text-gray-800">{t('contact.generalEmail')}</h4>
               </div>
-              <a href="mailto:hello@marcheprintanier.be" className="text-blue-600 font-bold mb-1 hover:underline block">
+              <a href="mailto:hello@marcheprintanier.be" className="text-emerald-600 font-bold mb-1 hover:underline block">
                 hello@marcheprintanier.be
               </a>
               <p className="text-xs text-gray-400">{t('contact.responseTime')}</p>
@@ -275,23 +275,23 @@ export const Contact: React.FC = () => {
 
             <div className="bg-white rounded-[40px] p-8 shadow-sm border border-gray-100 hover-lift transition-all">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center">
-                  <span className="text-blue-600 text-xl">🤝</span>
+                <div className="w-10 h-10 bg-emerald-100 rounded-xl flex items-center justify-center">
+                  <span className="text-emerald-600 text-xl">🤝</span>
                 </div>
                 <h4 className="font-bold text-gray-800">{t('contact.pressPartnerships')}</h4>
               </div>
-              <a href="mailto:presse@marcheprintanier.be" className="text-blue-600 font-bold mb-1 hover:underline block">
+              <a href="mailto:presse@marcheprintanier.be" className="text-emerald-600 font-bold mb-1 hover:underline block">
                 presse@marcheprintanier.be
               </a>
             </div>
 
-            <div className="bg-blue-50 rounded-[40px] p-8 border border-blue-100 hover-lift transition-all">
-              <h4 className="font-bold text-blue-800 mb-4">{t('contact.followUs')}</h4>
+            <div className="bg-emerald-50 rounded-[40px] p-8 border border-emerald-100 hover-lift transition-all">
+              <h4 className="font-bold text-emerald-800 mb-4">{t('contact.followUs')}</h4>
               <div className="flex gap-4">
-                <a href="#" className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-xl hover:bg-blue-100 transition-all hover:scale-110">
+                <a href="#" className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-xl hover:bg-emerald-100 transition-all hover:scale-110">
                   📸
                 </a>
-                <a href="#" className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-xl hover:bg-blue-100 transition-all hover:scale-110">
+                <a href="#" className="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center text-xl hover:bg-emerald-100 transition-all hover:scale-110">
                   👥
                 </a>
               </div>
