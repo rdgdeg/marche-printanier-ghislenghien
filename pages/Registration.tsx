@@ -23,13 +23,37 @@ export const Registration: React.FC = () => {
     facebook: '',
     consent: false
   });
+  const [mainPhotoFile, setMainPhotoFile] = useState<File | null>(null);
+  const [mainPhotoPreview, setMainPhotoPreview] = useState<string | null>(null);
+
+  const handleMainPhotoChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      if (file.size > 10 * 1024 * 1024) {
+        alert('Le fichier ne doit pas dépasser 10 Mo.');
+        e.target.value = '';
+        return;
+      }
+      if (!['image/png', 'image/jpeg', 'image/jpg'].includes(file.type)) {
+        alert('Format accepté : PNG ou JPG uniquement.');
+        e.target.value = '';
+        return;
+      }
+      setMainPhotoFile(file);
+      const url = URL.createObjectURL(file);
+      setMainPhotoPreview(url);
+    }
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate API call
-    console.log('Form data:', formData);
+    // Simulate API call (en production, envoyer formData + mainPhotoFile au serveur)
+    console.log('Form data:', formData, 'Main photo:', mainPhotoFile?.name);
     setSubmitted(true);
     setFormData({ nom: '', titre: '', selectedCategories: [], descriptionCourte: '', descriptionLongue: '', email: '', telephone: '', adresse: '', codePostal: '', ville: '', horaires: '', site: '', instagram: '', facebook: '', consent: false });
+    setMainPhotoFile(null);
+    if (mainPhotoPreview) URL.revokeObjectURL(mainPhotoPreview);
+    setMainPhotoPreview(null);
     window.scrollTo(0, 0);
   };
 
@@ -186,12 +210,31 @@ export const Registration: React.FC = () => {
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-4">
                 <label className="text-sm font-bold text-gray-700">{t('registration.mainPhoto')} *</label>
-                <div className="border-2 border-dashed border-gray-200 rounded-3xl p-8 text-center hover:border-emerald-500 transition-colors cursor-pointer group">
-                  <div className="text-3xl mb-2 group-hover:scale-110 transition-transform">📸</div>
-                  <p className="text-sm font-bold text-gray-500">Choisir un fichier</p>
-                  <p className="text-[10px] text-gray-400 mt-1 uppercase">PNG, JPG up to 10MB</p>
-                  <input type="file" className="hidden" />
-                </div>
+                <label
+                  htmlFor="main-photo-input"
+                  className="block border-2 border-dashed border-gray-200 rounded-3xl p-8 text-center hover:border-emerald-500 transition-colors cursor-pointer group"
+                >
+                  <input
+                    id="main-photo-input"
+                    type="file"
+                    accept="image/png,image/jpeg,image/jpg"
+                    className="hidden"
+                    onChange={handleMainPhotoChange}
+                  />
+                  {mainPhotoPreview ? (
+                    <div className="space-y-2">
+                      <img src={mainPhotoPreview} alt="Aperçu" className="mx-auto max-h-32 object-contain rounded-xl" />
+                      <p className="text-sm font-semibold text-emerald-600">{mainPhotoFile?.name}</p>
+                      <p className="text-xs text-gray-400">Cliquez pour changer</p>
+                    </div>
+                  ) : (
+                    <>
+                      <div className="text-3xl mb-2 group-hover:scale-110 transition-transform">📸</div>
+                      <p className="text-sm font-bold text-gray-500">Choisir un fichier</p>
+                      <p className="text-[10px] text-gray-400 mt-1 uppercase">PNG, JPG jusqu’à 10 Mo</p>
+                    </>
+                  )}
+                </label>
               </div>
               <div className="space-y-4">
                 <label className="text-sm font-bold text-gray-700">{t('registration.gallery')}</label>
